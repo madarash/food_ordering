@@ -1,5 +1,9 @@
 export 'big_text.dart';
 export 'small_text.dart';
-export 'icon_and_text_widget.dart';
+export 'icon_and_text_item.dart';
 export 'indicator.dart';
 export 'slider_item.dart';
+export 'slider_image_item.dart';
+export 'slider_text_info_item.dart';
+export 'food_horizontal_item.dart';
+export 'food_page_list_title.dart';

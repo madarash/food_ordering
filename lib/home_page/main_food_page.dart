@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:shop/utils/color.dart';
-import 'package:shop/utils/demensions.dart';
+import 'package:shop/utils/utils.dart';
+
 import 'package:shop/widgets/widgets.dart';
 import 'home_page.dart';
 
@@ -18,7 +18,11 @@ class _MainFoodPageState extends State<MainFoodPage> {
       body: Column(
         children: const [
           TopSection(),
-          FoodPageBody(),
+          Expanded(
+            child: SingleChildScrollView(
+              child: FoodPageBody(),
+            ),
+          ),
         ],
       ),
     );
@@ -62,9 +66,10 @@ class TopSection extends StatelessWidget {
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(Demensions.size10),
                   color: AppColors.mainColor),
-              child: const Icon(
+              child: Icon(
                 Icons.search,
                 color: Colors.white,
+                size: Demensions.iconSize,
               ),
             ),
           )

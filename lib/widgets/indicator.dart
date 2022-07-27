@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:shop/utils/color.dart';
-import 'package:shop/utils/demensions.dart';
+import 'package:shop/utils/utils.dart';
 
 class Indicator extends StatelessWidget {
   final bool isActive;
