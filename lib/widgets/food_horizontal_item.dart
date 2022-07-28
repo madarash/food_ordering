@@ -38,7 +38,9 @@ class FoodHorizontalItem extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
-                  const BigText(text: 'SomeTextInfo'),
+                  const BigText(
+                      text:
+                          'SomeTextInfo and more info to look how overflow works'),
                   const SmallText(text: 'some info about meal'),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,

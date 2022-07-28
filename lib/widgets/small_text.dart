@@ -12,7 +12,7 @@ class SmallText extends StatelessWidget {
     required this.text,
     this.color = AppColors.textColor,
     this.size = 0,
-    this.height = 1.2,
+    this.height = 0,
   }) : super(key: key);
 
   @override
@@ -22,7 +22,7 @@ class SmallText extends StatelessWidget {
       style: TextStyle(
         color: color,
         fontSize: size == 0 ? Demensions.size15 : size,
-        height: height,
+        height: height == 0 ? Demensions.sizeHeight1 : height,
         fontFamily: 'Roboto',
       ),
     );

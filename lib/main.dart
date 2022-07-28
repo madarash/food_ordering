@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
-import 'package:shop/home_page/main_food_page.dart';
+import 'package:shop/pages/food_details_page/page_food_details.dart';
+// import 'package:shop/pages/home_page/main_food_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,7 +15,7 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(primaryColor: Colors.blue),
-      home: const SafeArea(child: MainFoodPage()),
+      home: const SafeArea(child: FoodPageDeatils()),
     );
   }
 }

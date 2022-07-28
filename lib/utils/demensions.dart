@@ -12,8 +12,15 @@ class Demensions {
   static double sizeImageHorizontalItem = screenHeight / 5.9;
   //size container small image section
   static double heightSmallContainer = screenHeight / 8;
+  //size containers food page details
+  static double heightTopContainerPageDetails = screenHeight / 2.6;
+  static double heightBottomContainerPageDetails = screenHeight / 1.6;
+  //  height text
+  static double sizeHeight1 = screenHeight / 668.3;
+  static double sizeHeight2 = screenHeight / 401;
 
   //sizes for all items
+
   static double size5 = screenHeight / 100.7;
   static double size8 = screenHeight / 100.25;
   static double size10 = screenHeight / 80.2;
