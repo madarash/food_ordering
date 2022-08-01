@@ -3,7 +3,7 @@ import 'package:get/get.dart';
 class Demensions {
   //Screen height and wight
   static double screenHeight = Get.context!.height;
-  static double? screenWigth = Get.context!.width;
+  static double screenWigth = Get.context!.width;
   //height container items
   static double heightContainer = screenHeight / 3;
   static double pageViewContainer = screenHeight / 4;
@@ -16,8 +16,8 @@ class Demensions {
   static double heightTopContainerPageDetails = screenHeight / 2.6;
   static double heightBottomContainerPageDetails = screenHeight / 1.6;
   //  height text
-  static double sizeHeight1 = screenHeight / 668.3;
-  static double sizeHeight2 = screenHeight / 401;
+  static double heightText1 = screenHeight / 668.3;
+  static double heightText2 = screenHeight / 401;
 
   //sizes for all items
 
@@ -35,4 +35,6 @@ class Demensions {
   //default size for icons
   static double iconSize = screenHeight / 33.4;
   static double iconSmallSize = screenHeight / 66.8;
+  // height container food info
+  static double heightFoodInfo = screenHeight / 3.75;
 }

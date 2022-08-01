@@ -22,7 +22,7 @@ class SmallText extends StatelessWidget {
       style: TextStyle(
         color: color,
         fontSize: size == 0 ? Demensions.size15 : size,
-        height: height == 0 ? Demensions.sizeHeight1 : height,
+        height: height == 0 ? Demensions.heightText1 : height,
         fontFamily: 'Roboto',
       ),
     );
