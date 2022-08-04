@@ -4,8 +4,8 @@ import 'package:shop/utils/utils.dart';
 
 import 'package:shop/widgets/widgets.dart';
 
-class FoodPageDeatils extends StatelessWidget {
-  const FoodPageDeatils({Key? key}) : super(key: key);
+class FoodPageDetails extends StatelessWidget {
+  const FoodPageDetails({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -115,9 +115,9 @@ class FoodPageDeatils extends StatelessWidget {
                   children: [
                     Container(
                       decoration: BoxDecoration(
-                          color: AppColors.buttonBackgroundColor,
-                          borderRadius:
-                              BorderRadius.circular(Demensions.size20)),
+                        color: AppColors.buttonBackgroundColor,
+                        borderRadius: BorderRadius.circular(Demensions.size20),
+                      ),
                       child: Row(
                         children: [
                           IconButton(
@@ -168,29 +168,6 @@ class FoodPageDeatils extends StatelessWidget {
             ),
           ],
         ),
-      ),
-    );
-  }
-}
-
-class PageIcon extends StatelessWidget {
-  final IconData icon;
-  const PageIcon({
-    required this.icon,
-    Key? key,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: () {},
-      child: Container(
-        padding: EdgeInsets.all(Demensions.size5),
-        decoration: BoxDecoration(
-          color: AppColors.buttonBackgroundColor,
-          borderRadius: BorderRadius.circular(Demensions.size30),
-        ),
-        child: Icon(icon),
       ),
     );
   }
