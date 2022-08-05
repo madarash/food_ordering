@@ -5,8 +5,13 @@ class PageIcon extends StatelessWidget {
   final IconData icon;
   final Color iconColor;
   final Color backGroundColor;
+  final double radiusBorder;
+  final double paddingSize;
+
   const PageIcon({
     required this.icon,
+    this.paddingSize = 0,
+    this.radiusBorder = 0,
     this.iconColor = Colors.black,
     this.backGroundColor = AppColors.buttonBackgroundColor,
     Key? key,
@@ -17,10 +22,12 @@ class PageIcon extends StatelessWidget {
     return GestureDetector(
       onTap: () {},
       child: Container(
-        padding: EdgeInsets.all(Demensions.size5),
+        padding:
+            EdgeInsets.all(paddingSize == 0 ? Demensions.size5 : paddingSize),
         decoration: BoxDecoration(
           color: backGroundColor,
-          borderRadius: BorderRadius.circular(Demensions.size30),
+          borderRadius: BorderRadius.circular(
+              radiusBorder == 0 ? Demensions.size30 : radiusBorder),
         ),
         child: Icon(
           icon,

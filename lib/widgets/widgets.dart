@@ -9,3 +9,4 @@ export 'food_horizontal_item.dart';
 export 'food_page_list_title.dart';
 export 'food_info.dart';
 export 'page_icon.dart';
+export 'button_add_to_cart.dart';

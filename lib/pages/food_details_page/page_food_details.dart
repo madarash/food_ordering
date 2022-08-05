@@ -134,20 +134,7 @@ class FoodPageDetails extends StatelessWidget {
                         ],
                       ),
                     ),
-                    GestureDetector(
-                      onTap: () {},
-                      child: Container(
-                        padding: EdgeInsets.all(Demensions.size15),
-                        decoration: BoxDecoration(
-                          color: AppColors.mainColor,
-                          borderRadius:
-                              BorderRadius.circular(Demensions.size20),
-                        ),
-                        child: const BigText(
-                            color: AppColors.buttonBackgroundColor,
-                            text: '\$0.08 Add to cart'),
-                      ),
-                    )
+                    const ButtonAddToCart(),
                   ],
                 ),
               ),
