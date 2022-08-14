@@ -1,8 +1,9 @@
 import 'dart:convert';
 
 import 'package:http/http.dart' as http;
-
 import 'package:shop/model/photo_model.dart';
+
+// import 'package:shop/model/photo_model.dart';
 
 class ProductProvider {
   Future<List<dynamic>> getProducts() async {

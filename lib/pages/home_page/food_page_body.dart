@@ -73,13 +73,12 @@ class _FoodPageBodyState extends State<FoodPageBody> {
               ListView.builder(
                 shrinkWrap: true,
                 physics: const NeverScrollableScrollPhysics(),
-                itemCount: state.loadedProducts.length,
+                itemCount: 10,
                 itemBuilder: (context, index) {
-                  return Container();
-                  // return FoodHorizontalItem(
-                  //   infoText: state.loadedProducts[index].title,
-                  //   imagePopular: state.loadedProducts[index].thumbnailUrl,
-                  // );
+                  return FoodHorizontalItem(
+                    infoText: state.loadedProducts[index].title,
+                    imagePopular: state.loadedProducts[index].thumbnailUrl,
+                  );
                 },
               ),
             ],

@@ -30,7 +30,7 @@ class FoodHorizontalItem extends StatelessWidget {
           Expanded(
             child: Container(
               height: Demensions.heightSmallContainer,
-              padding: EdgeInsets.symmetric(horizontal: Demensions.size30),
+              padding: EdgeInsets.symmetric(horizontal: Demensions.size10),
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.only(
                   topRight: Radius.circular(Demensions.size20),
