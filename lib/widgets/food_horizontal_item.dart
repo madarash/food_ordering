@@ -3,7 +3,11 @@ import 'package:shop/utils/utils.dart';
 import 'package:shop/widgets/widgets.dart';
 
 class FoodHorizontalItem extends StatelessWidget {
-  const FoodHorizontalItem({Key? key}) : super(key: key);
+  final String imagePopular;
+  final String infoText;
+  const FoodHorizontalItem(
+      {required this.infoText, required this.imagePopular, Key? key})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -17,9 +21,9 @@ class FoodHorizontalItem extends StatelessWidget {
             width: Demensions.sizeImageHorizontalItem,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(Demensions.size20),
-              image: const DecorationImage(
+              image: DecorationImage(
                 fit: BoxFit.cover,
-                image: AssetImage('assets/image/1.png'),
+                image: NetworkImage(imagePopular),
               ),
             ),
           ),
@@ -38,9 +42,7 @@ class FoodHorizontalItem extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
-                  const BigText(
-                      text:
-                          'SomeTextInfo and more info to look how overflow works'),
+                  BigText(text: infoText),
                   const SmallText(text: 'some info about meal'),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,

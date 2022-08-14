@@ -1,9 +1,11 @@
-import 'package:get/get.dart';
+import 'package:flutter/cupertino.dart';
 
 class Demensions {
   //Screen height and wight
-  static double screenHeight = Get.context!.height;
-  static double screenWigth = Get.context!.width;
+  static double screenHeight =
+      MediaQueryData.fromWindow(WidgetsBinding.instance.window).size.height;
+  static double screenWigth =
+      MediaQueryData.fromWindow(WidgetsBinding.instance.window).size.width;
   //height container items
   static double heightContainer = screenHeight / 3;
   static double pageViewContainer = screenHeight / 4;

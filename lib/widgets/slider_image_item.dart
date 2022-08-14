@@ -21,7 +21,7 @@ class SliderImageItem extends StatelessWidget {
         color: index.isEven ? AppColors.iconColor1 : AppColors.iconColor2,
         image: DecorationImage(
           fit: BoxFit.cover,
-          image: AssetImage(image),
+          image: NetworkImage(image),
         ),
       ),
     );

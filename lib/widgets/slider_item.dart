@@ -4,8 +4,10 @@ import 'package:shop/widgets/widgets.dart';
 
 class SliderItem extends StatelessWidget {
   final int index;
+  final String image;
   const SliderItem({
     Key? key,
+    required this.image,
     required this.index,
   }) : super(key: key);
 
@@ -13,7 +15,7 @@ class SliderItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return Stack(
       children: [
-        SliderImageItem(index: index, image: 'assets/image/1.png'),
+        SliderImageItem(index: index, image: image),
         Container(
           margin: EdgeInsets.only(
               left: Demensions.size20,
