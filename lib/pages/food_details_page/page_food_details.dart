@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:shop/bloc/product_bloc.dart';
 
 import 'package:shop/utils/utils.dart';
 
@@ -12,6 +14,7 @@ class FoodPageDetails extends StatelessWidget {
     return Scaffold(
       body: SizedBox(
         height: Demensions.screenHeight,
+        width: Demensions.screenWigth,
         child: Stack(
           alignment: AlignmentDirectional.bottomCenter,
           children: [
@@ -139,19 +142,27 @@ class FoodPageDetails extends StatelessWidget {
                 ),
               ),
             ),
-            Positioned(
-              top: 0,
-              child: Container(
-                padding: EdgeInsets.all(Demensions.size20),
-                width: Demensions.screenWigth,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: const [
-                    PageIcon(icon: Icons.keyboard_arrow_left),
-                    PageIcon(icon: Icons.close)
-                  ],
-                ),
-              ),
+            BlocBuilder<ProductBloc, ProductState>(
+              builder: (context, state) {
+                return Positioned(
+                  top: 0,
+                  child: Container(
+                    padding: EdgeInsets.all(Demensions.size20),
+                    width: Demensions.screenWigth,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        PageIcon(
+                          icon: Icons.keyboard_arrow_left,
+                        ),
+                        PageIcon(
+                          icon: Icons.close,
+                        )
+                      ],
+                    ),
+                  ),
+                );
+              },
             ),
           ],
         ),

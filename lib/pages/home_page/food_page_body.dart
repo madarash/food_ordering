@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:shop/bloc/product_bloc.dart';
-
 import 'package:shop/utils/utils.dart';
-
 import 'package:shop/widgets/widgets.dart';
 
 class FoodPageBody extends StatefulWidget {
@@ -22,6 +20,7 @@ class _FoodPageBodyState extends State<FoodPageBody> {
     return BlocBuilder<ProductBloc, ProductState>(
       builder: (context, state) {
         if (state is ProductLoadedState) {
+          List<dynamic> productList = state.loadedProducts;
           return Column(
             children: [
               SizedBox(
@@ -43,8 +42,13 @@ class _FoodPageBodyState extends State<FoodPageBody> {
                       duration: const Duration(seconds: 1),
                       tween: Tween(begin: scale, end: scale),
                       curve: Curves.ease,
-                      child: SliderItem(
-                          index: index, image: state.loadedProducts[index].url),
+                      child: InkWell(
+                        onTap: () {},
+                        child: SliderItem(
+                          index: index,
+                          image: productList[index].url,
+                        ),
+                      ),
                       builder: (context, value, child) {
                         return Transform.scale(
                           scale: value as double,
@@ -76,15 +80,40 @@ class _FoodPageBodyState extends State<FoodPageBody> {
                 itemCount: 10,
                 itemBuilder: (context, index) {
                   return FoodHorizontalItem(
-                    infoText: state.loadedProducts[index].title,
-                    imagePopular: state.loadedProducts[index].thumbnailUrl,
+                    infoText: productList[index].title,
+                    imagePopular: productList[index].thumbnailUrl,
                   );
                 },
               ),
             ],
           );
         }
-        return const Center(child: CircularProgressIndicator());
+        if (state is ProductLoadedState) {
+          return SizedBox(
+            height: Demensions.screenHeight -
+                Demensions.heightTopContainerPageDetails,
+            width: Demensions.screenWigth,
+            child: const Center(
+              child: SizedBox(
+                width: 100,
+                height: 100,
+                child: CircularProgressIndicator(
+                  color: AppColors.mainColor,
+                ),
+              ),
+            ),
+          );
+        }
+        if (state is ProductLoadError) {
+          return Center(
+            child: Text(state.message),
+          );
+        }
+        return Container(
+          color: Colors.amber,
+          width: 100,
+          height: 100,
+        );
       },
     );
   }

@@ -7,8 +7,10 @@ class PageIcon extends StatelessWidget {
   final Color backGroundColor;
   final double radiusBorder;
   final double paddingSize;
+  // final func;
 
   const PageIcon({
+    // required this.func,
     required this.icon,
     this.paddingSize = 0,
     this.radiusBorder = 0,

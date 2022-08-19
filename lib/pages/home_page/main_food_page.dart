@@ -3,14 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:shop/widgets/widgets.dart';
 import 'home_page.dart';
 
-class MainFoodPage extends StatefulWidget {
+class MainFoodPage extends StatelessWidget {
   const MainFoodPage({Key? key}) : super(key: key);
 
-  @override
-  State<MainFoodPage> createState() => _MainFoodPageState();
-}
-
-class _MainFoodPageState extends State<MainFoodPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

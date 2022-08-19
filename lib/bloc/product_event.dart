@@ -1,5 +1,9 @@
 part of 'product_bloc.dart';
 
-abstract class ProductEvent {}
+abstract class ProductEvent extends Equatable {}
 
-class GetData extends ProductEvent {}
+@immutable
+class GetData extends ProductEvent {
+  @override
+  List<Object?> get props => [];
+}

@@ -17,8 +17,8 @@ class FoodPageRecommended extends StatelessWidget {
             title: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: const [
-                  PageIcon(icon: Icons.clear),
-                  PageIcon(icon: Icons.shopping_cart_outlined),
+                  // PageIcon(icon: Icons.clear,),
+                  // PageIcon(icon: Icons.shopping_cart_outlined),
                 ]),
             bottom: PreferredSize(
               preferredSize: const Size.fromHeight(40),
@@ -70,17 +70,17 @@ class FoodPageRecommended extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
-                PageIcon(
-                  paddingSize: Demensions.size15,
-                  backGroundColor: AppColors.mainColor,
-                  icon: Icons.remove,
-                ),
-                BigText(text: '\$ $price X $count'),
-                PageIcon(
-                  paddingSize: Demensions.size15,
-                  backGroundColor: AppColors.mainColor,
-                  icon: Icons.add,
-                ),
+                // PageIcon(
+                //   paddingSize: Demensions.size15,
+                //   backGroundColor: AppColors.mainColor,
+                //   icon: Icons.remove,
+                // ),
+                // BigText(text: '\$ $price X $count'),
+                // PageIcon(
+                //   paddingSize: Demensions.size15,
+                //   backGroundColor: AppColors.mainColor,
+                //   icon: Icons.add,
+                // ),
               ],
             ),
           ),
@@ -96,11 +96,11 @@ class FoodPageRecommended extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                PageIcon(
-                  paddingSize: Demensions.size20,
-                  icon: Icons.favorite,
-                  radiusBorder: Demensions.size20,
-                ),
+                // PageIcon(
+                //   paddingSize: Demensions.size20,
+                //   icon: Icons.favorite,
+                //   radiusBorder: Demensions.size20,
+                // ),
                 ButtonAddToCart(
                   paddingSize: Demensions.size20,
                   borderRadius: Demensions.size20,

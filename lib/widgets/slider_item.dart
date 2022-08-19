@@ -15,7 +15,9 @@ class SliderItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return Stack(
       children: [
-        SliderImageItem(index: index, image: image),
+        GestureDetector(
+            onTap: (() => Navigator.pushNamed(context, '/food_details')),
+            child: SliderImageItem(index: index, image: image)),
         Container(
           margin: EdgeInsets.only(
               left: Demensions.size20,
