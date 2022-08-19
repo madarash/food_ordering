@@ -1,7 +1,6 @@
 import 'dart:convert';
 
 import 'package:http/http.dart' as http;
-
 import 'package:shop/model/photo_model.dart';
 import 'package:shop/utils/app_constants.dart';
 
@@ -10,6 +9,9 @@ abstract class ProductApiRepo {
 }
 
 class ProductApiRepoImpl implements ProductApiRepo {
+  // Client client;
+
+  // ProductApiRepoImpl({required this.client});
   @override
   Future<List<dynamic>> getProducts() async {
     final url = Uri.parse(AppConstants.baseUrl);

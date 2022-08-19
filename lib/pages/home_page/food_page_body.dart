@@ -88,7 +88,7 @@ class _FoodPageBodyState extends State<FoodPageBody> {
             ],
           );
         }
-        if (state is ProductLoadedState) {
+        if (state is ProductLoadingState) {
           return SizedBox(
             height: Demensions.screenHeight -
                 Demensions.heightTopContainerPageDetails,
@@ -109,11 +109,7 @@ class _FoodPageBodyState extends State<FoodPageBody> {
             child: Text(state.message),
           );
         }
-        return Container(
-          color: Colors.amber,
-          width: 100,
-          height: 100,
-        );
+        return Container();
       },
     );
   }
