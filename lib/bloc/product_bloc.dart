@@ -12,7 +12,7 @@ class ProductBloc extends Bloc<ProductEvent, ProductState> {
   ProductBloc({required this.repo}) : super(ProductLoadingState()) {
     on<GetData>(
       (event, emit) async {
-        emit(ProductLoadingState());
+        // emit(ProductLoadingState());
         try {
           final List<dynamic> loadedProductsList = await repo.getProducts();
           emit(ProductLoadedState(loadedProducts: loadedProductsList));
