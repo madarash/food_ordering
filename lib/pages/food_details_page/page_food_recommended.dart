@@ -12,13 +12,16 @@ class FoodPageRecommended extends StatelessWidget {
     return Scaffold(
       backgroundColor: AppColors.buttonBackgroundColor,
       body: CustomScrollView(
+        physics: const BouncingScrollPhysics(),
         slivers: [
           SliverAppBar(
             title: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: const [
-                  // PageIcon(icon: Icons.clear,),
-                  // PageIcon(icon: Icons.shopping_cart_outlined),
+                  PageIcon(
+                    icon: Icons.clear,
+                  ),
+                  PageIcon(icon: Icons.shopping_cart_outlined),
                 ]),
             bottom: PreferredSize(
               preferredSize: const Size.fromHeight(40),
@@ -70,17 +73,17 @@ class FoodPageRecommended extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
-                // PageIcon(
-                //   paddingSize: Demensions.size15,
-                //   backGroundColor: AppColors.mainColor,
-                //   icon: Icons.remove,
-                // ),
-                // BigText(text: '\$ $price X $count'),
-                // PageIcon(
-                //   paddingSize: Demensions.size15,
-                //   backGroundColor: AppColors.mainColor,
-                //   icon: Icons.add,
-                // ),
+                PageIcon(
+                  paddingSize: Demensions.size15,
+                  backGroundColor: AppColors.mainColor,
+                  icon: Icons.remove,
+                ),
+                BigText(text: '\$ $price X $count'),
+                PageIcon(
+                  paddingSize: Demensions.size15,
+                  backGroundColor: AppColors.mainColor,
+                  icon: Icons.add,
+                ),
               ],
             ),
           ),

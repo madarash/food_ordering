@@ -1,6 +1,5 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:shop/pages/food_details_page/page_food_details.dart';
 
 import 'package:shop/pages/home_page/main_food_page.dart';
 
@@ -16,7 +15,7 @@ class MainScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocProvider(
       create: (context) => appData..add(GetData()),
-      child: const SafeArea(child: FoodPageDetails()),
+      child: const SafeArea(child: MainFoodPage()),
     );
   }
 }

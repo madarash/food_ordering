@@ -42,12 +42,9 @@ class _FoodPageBodyState extends State<FoodPageBody> {
                       duration: const Duration(seconds: 1),
                       tween: Tween(begin: scale, end: scale),
                       curve: Curves.ease,
-                      child: InkWell(
-                        onTap: () {},
-                        child: SliderItem(
-                          index: index,
-                          image: productList[index].url,
-                        ),
+                      child: SliderItem(
+                        index: index,
+                        image: productList[index].url,
                       ),
                       builder: (context, value, child) {
                         return Transform.scale(

@@ -21,20 +21,17 @@ class PageIcon extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: () {},
-      child: Container(
-        padding:
-            EdgeInsets.all(paddingSize == 0 ? Demensions.size5 : paddingSize),
-        decoration: BoxDecoration(
-          color: backGroundColor,
-          borderRadius: BorderRadius.circular(
-              radiusBorder == 0 ? Demensions.size30 : radiusBorder),
-        ),
-        child: Icon(
-          icon,
-          color: iconColor,
-        ),
+    return Container(
+      padding:
+          EdgeInsets.all(paddingSize == 0 ? Demensions.size5 : paddingSize),
+      decoration: BoxDecoration(
+        color: backGroundColor,
+        borderRadius: BorderRadius.circular(
+            radiusBorder == 0 ? Demensions.size30 : radiusBorder),
+      ),
+      child: Icon(
+        icon,
+        color: iconColor,
       ),
     );
   }

@@ -1,6 +1,5 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:shop/bloc/product_bloc.dart';
 import 'package:shop/utils/utils.dart';
 
 import 'package:shop/widgets/widgets.dart';
@@ -30,9 +29,9 @@ class FoodPageDetails extends StatelessWidget {
               ),
             ),
             Positioned(
-              top: Demensions.screenHeight / 2.5,
+              top: Demensions.heightPositionInfoSection,
               child: Container(
-                padding: EdgeInsets.symmetric(horizontal: Demensions.size10),
+                padding: EdgeInsets.symmetric(horizontal: Demensions.size15),
                 height: Demensions.heightBottomContainerPageDetails,
                 width: Demensions.screenWigth,
                 decoration: const BoxDecoration(
@@ -96,10 +95,11 @@ class FoodPageDetails extends StatelessWidget {
                       height: Demensions.heightFoodInfo,
                       width: Demensions.screenWigth,
                       child: const SingleChildScrollView(
-                          physics: BouncingScrollPhysics(),
-                          child: FoodInfo(
-                              text:
-                                  'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssmagna aliqua. Ut enim ad minim veniam')),
+                        physics: BouncingScrollPhysics(),
+                        child: FoodInfo(
+                            text:
+                                'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssmagna aliqua. Ut enim ad minim veniam'),
+                      ),
                     ),
                   ],
                 ),
@@ -109,7 +109,7 @@ class FoodPageDetails extends StatelessWidget {
               bottom: 0,
               child: Container(
                 width: Demensions.screenWigth,
-                height: 100,
+                height: Demensions.heightFoodInfoBottomBar,
                 decoration: const BoxDecoration(
                   color: AppColors.mainGreyColor,
                   borderRadius: BorderRadius.only(
@@ -147,19 +147,19 @@ class FoodPageDetails extends StatelessWidget {
               ),
             ),
             Positioned(
-              top: 0,
+              top: Demensions.size40,
               child: Container(
                 padding: EdgeInsets.all(Demensions.size20),
                 width: Demensions.screenWigth,
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: const [
-                    PageIcon(
-                      icon: Icons.keyboard_arrow_left,
+                  children: [
+                    GestureDetector(
+                      onTap: () => AutoRouter.of(context).pop(),
+                      child: const PageIcon(
+                        icon: Icons.keyboard_arrow_left,
+                      ),
                     ),
-                    PageIcon(
-                      icon: Icons.close,
-                    )
                   ],
                 ),
               ),

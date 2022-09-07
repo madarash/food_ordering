@@ -18,7 +18,7 @@ class SliderItem extends StatelessWidget {
       children: [
         GestureDetector(
           onTap: (() {
-            AutoRouter.of(context).pushNamed('/food-page-details');
+            AutoRouter.of(context).pushNamed('/food-page-recommended');
           }),
           child: SliderImageItem(index: index, image: image),
         ),
