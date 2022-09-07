@@ -1,3 +1,4 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:shop/utils/utils.dart';
 import 'package:shop/widgets/widgets.dart';
@@ -16,8 +17,11 @@ class SliderItem extends StatelessWidget {
     return Stack(
       children: [
         GestureDetector(
-            onTap: (() => Navigator.pushNamed(context, '/food_details')),
-            child: SliderImageItem(index: index, image: image)),
+          onTap: (() {
+            AutoRouter.of(context).pushNamed('/food-page-details');
+          }),
+          child: SliderImageItem(index: index, image: image),
+        ),
         Container(
           margin: EdgeInsets.only(
               left: Demensions.size20,

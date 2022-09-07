@@ -15,7 +15,7 @@ class _FoodInfoState extends State<FoodInfo> {
   late String firstHalf;
   late String secondHalf;
   bool hiddenText = true;
-  double textHeight = Demensions.screenHeight / 5.63;
+  double textHeight = Demensions.screenHeight / 7.63;
 
   @override
   void initState() {
@@ -40,7 +40,7 @@ class _FoodInfoState extends State<FoodInfo> {
                 SmallText(
                     color: AppColors.textInfoColor,
                     height: Demensions.heightText2,
-                    size: Demensions.size20,
+                    size: Demensions.size15,
                     text: hiddenText
                         ? ('$firstHalf...')
                         : (firstHalf + secondHalf)),
