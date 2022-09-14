@@ -15,9 +15,8 @@
 
 import 'package:auto_route/auto_route.dart';
 import 'package:shop/main_screen.dart';
-import 'package:shop/pages/food_details_page/page_food_details.dart';
-import 'package:shop/pages/food_details_page/page_food_recommended.dart';
-
+import 'package:shop/pages/food_details/page_food_details.dart';
+import 'package:shop/pages/food_recommended/page_food_recommended.dart';
 
 @MaterialAutoRouter(
   replaceInRouteName: 'Page,Route',
@@ -27,5 +26,4 @@ import 'package:shop/pages/food_details_page/page_food_recommended.dart';
     AutoRoute(page: FoodPageRecommended)
   ],
 )
-
-class  $AppRouter {}
+class $AppRouter {}

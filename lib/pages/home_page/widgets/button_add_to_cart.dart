@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:shop/utils/utils.dart';
-import 'package:shop/widgets/widgets.dart';
+import 'package:shop/pages/home_page/widgets/widgets.dart';
 
 class ButtonAddToCart extends StatelessWidget {
   final double paddingSize;
@@ -23,8 +23,8 @@ class ButtonAddToCart extends StatelessWidget {
           borderRadius: BorderRadius.circular(
               borderRadius == 0 ? Demensions.size15 : borderRadius),
         ),
-        child: const BigText(
-            color: AppColors.buttonBackgroundColor, text: '\$0.08 Add to cart'),
+        child:
+            BigText(color: AppColors.buttonBackgroundColor, text: Temp.text7),
       ),
     );
   }

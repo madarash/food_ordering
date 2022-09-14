@@ -1,7 +1,8 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
+import 'package:shop/router.gr.dart';
 import 'package:shop/utils/utils.dart';
-import 'package:shop/widgets/widgets.dart';
+import 'package:shop/pages/home_page/widgets/widgets.dart';
 
 class SliderItem extends StatelessWidget {
   final int index;
@@ -18,7 +19,7 @@ class SliderItem extends StatelessWidget {
       children: [
         GestureDetector(
           onTap: (() {
-            AutoRouter.of(context).pushNamed('/food-page-recommended');
+            context.router.push(FoodRouteRecommended(image: image));
           }),
           child: SliderImageItem(index: index, image: image),
         ),
@@ -58,9 +59,9 @@ class RaitingFoodInfo extends StatelessWidget {
           ),
         ),
         SizedBox(width: Demensions.size10),
-        const SmallText(text: '4.5'),
+        SmallText(text: Temp.text12),
         SizedBox(width: Demensions.size10),
-        const SmallText(text: '1000 comments'),
+        SmallText(text: Temp.text13),
       ],
     );
   }

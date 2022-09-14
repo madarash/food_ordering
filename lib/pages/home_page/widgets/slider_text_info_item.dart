@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:shop/utils/utils.dart';
-import 'package:shop/widgets/widgets.dart';
+import 'package:shop/pages/home_page/widgets/widgets.dart';
 
 class SliderTextInfoItem extends StatelessWidget {
   final Widget info;
@@ -53,7 +53,7 @@ class SliderTextInfoItem extends StatelessWidget {
                   IconAndTextItem(
                     smallTextSize: smallTextSize,
                     icon: Icons.circle_sharp,
-                    text: 'Normal',
+                    text: Temp.text1,
                     iconColor: AppColors.yellowColor,
                     iconSize: Demensions.size20,
                     widthSizeBox: Demensions.size10,
@@ -61,7 +61,7 @@ class SliderTextInfoItem extends StatelessWidget {
                   IconAndTextItem(
                     smallTextSize: smallTextSize,
                     icon: Icons.location_on,
-                    text: '1.7km',
+                    text: Temp.text2,
                     iconColor: AppColors.mainColor,
                     iconSize: Demensions.size20,
                     widthSizeBox: Demensions.size10,
@@ -69,7 +69,7 @@ class SliderTextInfoItem extends StatelessWidget {
                   IconAndTextItem(
                     smallTextSize: smallTextSize,
                     icon: Icons.access_time_rounded,
-                    text: '32m',
+                    text: Temp.text3,
                     iconColor: AppColors.iconColor2,
                     iconSize: Demensions.size20,
                     widthSizeBox: Demensions.size10,

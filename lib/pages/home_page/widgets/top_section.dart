@@ -18,17 +18,17 @@ class TopSection extends StatelessWidget {
         children: [
           Column(
             children: [
-              const BigText(
-                text: 'Country',
+              BigText(
+                text: Temp.text14,
                 color: AppColors.mainColor,
               ),
               Row(
-                children: const [
+                children: [
                   SmallText(
-                    text: 'City',
+                    text: Temp.text15,
                     color: AppColors.mainBlackColor,
                   ),
-                  Icon(Icons.arrow_drop_down_rounded),
+                  const Icon(Icons.arrow_drop_down_rounded),
                 ],
               ),
             ],
@@ -38,8 +38,9 @@ class TopSection extends StatelessWidget {
               width: Demensions.size40,
               height: Demensions.size40,
               decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(Demensions.size10),
-                  color: AppColors.mainColor),
+                borderRadius: BorderRadius.circular(Demensions.size10),
+                color: AppColors.mainColor,
+              ),
               child: Icon(
                 Icons.search,
                 color: Colors.white,

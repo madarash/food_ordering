@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-
-import 'package:shop/widgets/widgets.dart';
-import 'home_page.dart';
+import 'package:shop/pages/home_page/widgets/widgets.dart';
+import 'pages/home_page/food_page_body.dart';
 
 class MainFoodPage extends StatelessWidget {
   const MainFoodPage({Key? key}) : super(key: key);

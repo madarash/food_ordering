@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:shop/utils/utils.dart';
-import 'package:shop/widgets/widgets.dart';
+import 'package:shop/pages/home_page/widgets/widgets.dart';
 
 class FoodPageListTitle extends StatelessWidget {
   const FoodPageListTitle({
@@ -14,18 +14,18 @@ class FoodPageListTitle extends StatelessWidget {
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.end,
         children: [
-          const BigText(text: 'Popular'),
+          BigText(text: Temp.text9),
           SizedBox(width: Demensions.size10),
           Container(
             margin: const EdgeInsets.only(bottom: 3),
-            child: const BigText(
-              text: '.',
+            child: BigText(
+              text: Temp.text11,
             ),
           ),
           SizedBox(width: Demensions.size10),
           Container(
             margin: const EdgeInsets.only(bottom: 1),
-            child: const SmallText(text: 'Food paring'),
+            child: SmallText(text: Temp.text10),
           ),
         ],
       ),

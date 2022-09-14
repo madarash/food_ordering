@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:shop/utils/app_constants.dart';
 import 'package:shop/utils/color.dart';
 import 'package:shop/utils/demensions.dart';
-import 'package:shop/widgets/small_text.dart';
+import 'package:shop/pages/home_page/widgets/widgets.dart';
 
 class FoodInfo extends StatefulWidget {
   final String text;
@@ -53,7 +54,9 @@ class _FoodInfoState extends State<FoodInfo> {
                   child: Row(
                     children: [
                       SmallText(
-                        text: hiddenText ? 'Show more' : 'Hide text',
+                        text: hiddenText
+                            ? AppConstants.showText
+                            : AppConstants.hideText,
                         color: AppColors.mainColor,
                       ),
                       Icon(

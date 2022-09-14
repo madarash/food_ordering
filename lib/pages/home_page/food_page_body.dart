@@ -2,11 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:shop/bloc/product_bloc.dart';
 import 'package:shop/utils/utils.dart';
-import 'package:shop/widgets/widgets.dart';
+import 'package:shop/pages/home_page/widgets/widgets.dart';
 
 class FoodPageBody extends StatefulWidget {
   const FoodPageBody({Key? key}) : super(key: key);
-
   @override
   State<FoodPageBody> createState() => _FoodPageBodyState();
 }
@@ -14,7 +13,6 @@ class FoodPageBody extends StatefulWidget {
 class _FoodPageBodyState extends State<FoodPageBody> {
   var _currantPage = 0;
   PageController pageController = PageController(viewportFraction: 0.8);
-
   @override
   Widget build(BuildContext context) {
     return BlocBuilder<ProductBloc, ProductState>(
@@ -86,20 +84,7 @@ class _FoodPageBodyState extends State<FoodPageBody> {
           );
         }
         if (state is ProductLoadingState) {
-          return SizedBox(
-            height: Demensions.screenHeight -
-                Demensions.heightTopContainerPageDetails,
-            width: Demensions.screenWigth,
-            child: const Center(
-              child: SizedBox(
-                width: 100,
-                height: 100,
-                child: CircularProgressIndicator(
-                  color: AppColors.mainColor,
-                ),
-              ),
-            ),
-          );
+          return const LoadingSection();
         }
         if (state is ProductLoadError) {
           return Center(
