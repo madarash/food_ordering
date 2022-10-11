@@ -10,7 +10,7 @@ class HeaderImageFoodRecommend extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return FlexibleSpaceBar(
-      background: Image.network(
+      background: Image.asset(
         image,
         width: double.maxFinite,
         fit: BoxFit.cover,

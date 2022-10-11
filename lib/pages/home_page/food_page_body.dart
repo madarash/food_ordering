@@ -42,7 +42,7 @@ class _FoodPageBodyState extends State<FoodPageBody> {
                       curve: Curves.ease,
                       child: SliderItem(
                         index: index,
-                        image: productList[index].url,
+                        image: 'assets/image/1.png',
                       ),
                       builder: (context, value, child) {
                         return Transform.scale(
