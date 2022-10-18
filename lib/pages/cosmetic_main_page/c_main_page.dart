@@ -11,7 +11,6 @@ class CosmeticMainPage extends StatelessWidget {
     return DefaultTabController(
       length: 4,
       child: Scaffold(
-        extendBodyBehindAppBar: true,
         backgroundColor: Colors.grey[100],
         appBar: AppBar(
             bottom: TabBar(
@@ -61,23 +60,111 @@ class CosmeticMainPage extends StatelessWidget {
                 ),
               )
             ]),
-        body: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            SizedBox(
-              height: 300,
+        body: Padding(
+          padding: const EdgeInsets.only(right: 15.0, left: 15, top: 15),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              SizedBox(
+                height: 300,
+                width: Demensions.screenWigth,
+                child: const TabBarView(
+                  children: [
+                    CosmeticProductFace(),
+                    CosmeticProductFace(),
+                    CosmeticProductFace(),
+                    CosmeticProductFace(),
+                  ],
+                ),
+              ),
+              const CosmeticPopularSection(),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+class CosmeticPopularSection extends StatelessWidget {
+  const CosmeticPopularSection({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 15.0),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
+        children: [
+          Padding(
+            padding: const EdgeInsets.only(top: 20, bottom: 10),
+            child: SizedBox(
               width: Demensions.screenWigth,
-              child: const TabBarView(
-                children: [
-                  CosmeticProductFace(),
-                  CosmeticProductView2(),
-                  CosmeticProductView2(),
-                  CosmeticProductView2(),
-                ],
+              child: const BigText(
+                text: 'Popular',
               ),
             ),
-          ],
-        ),
+          ),
+          SizedBox(
+            height: 180,
+            child: ScrollConfiguration(
+              behavior: const ScrollBehavior(),
+              child: GlowingOverscrollIndicator(
+                axisDirection: AxisDirection.down,
+                color: Colors.transparent,
+                child: ListView(
+                  physics: const ClampingScrollPhysics(),
+                  scrollDirection: Axis.vertical,
+                  children: const [
+                    CosmeticPopularProductItem(),
+                    CosmeticPopularProductItem(),
+                    CosmeticPopularProductItem(),
+                  ],
+                ),
+              ),
+            ),
+          )
+        ],
+      ),
+    );
+  }
+}
+
+class CosmeticPopularProductItem extends StatelessWidget {
+  const CosmeticPopularProductItem({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 10),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          Container(
+            decoration: BoxDecoration(
+                image: const DecorationImage(
+                    image: AssetImage('assets/image/5.png')),
+                borderRadius: BorderRadius.circular(20)),
+            height: 75,
+            width: 75,
+          ),
+          Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: const [
+              BigText(text: 'SomeBigText'),
+              SmallText(text: 'SomeSmall text')
+            ],
+          ),
+          const SizedBox(
+            width: 30,
+          ),
+          const BigText(text: '\$ 9.33')
+        ],
       ),
     );
   }
@@ -89,7 +176,6 @@ class CosmeticProductFace extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView(
-      padding: const EdgeInsets.symmetric(horizontal: 15),
       scrollDirection: Axis.horizontal,
       children: const [
         CosmeticItem(
@@ -138,7 +224,7 @@ class CosmeticItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       margin: const EdgeInsets.symmetric(horizontal: 15),
-      height: 300,
+      height: 200,
       width: 200,
       decoration: BoxDecoration(
           color: Colors.white, borderRadius: BorderRadius.circular(15)),
@@ -146,7 +232,8 @@ class CosmeticItem extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
           SizedBox(
-            height: 200,
+            height: 160,
+            width: 160,
             child: Image.asset(
               image,
               fit: BoxFit.cover,
@@ -207,7 +294,7 @@ class CosmeticProductView2 extends StatelessWidget {
       height: 300,
       width: 200,
       decoration: BoxDecoration(
-          color: Color.fromARGB(255, 163, 0, 0),
+          color: const Color.fromARGB(255, 163, 0, 0),
           borderRadius: BorderRadius.circular(15)),
     );
   }
